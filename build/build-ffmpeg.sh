@@ -60,6 +60,7 @@ configure_build () {
   FF_FLAGS="-L${3}/lib -I${3}/include"
   export LDFLAGS="$FF_FLAGS"
   export CFLAGS="$FF_FLAGS"
+  export MACOSX_DEPLOYMENT_TARGET=11.7
 
   FFMPEG_EXTRAS=''
   
@@ -75,12 +76,14 @@ configure_build () {
 
 
   # --pkg-config-flags="--static" is required to respect the Libs.private flags of the *.pc files
-  ./configure --prefix="$4" --enable-gpl --pkg-config-flags="--static"   --pkg-config=$3/bin/pkg-config \
-      --enable-libaom --enable-libopenh264 --enable-libx264 --enable-libx265 --enable-libvpx \
-      --enable-libmp3lame --enable-libopus --enable-neon --enable-runtime-cpudetect \
-      --enable-audiotoolbox --enable-videotoolbox --enable-libvorbis --enable-libsvtav1 \
-      --enable-libass --enable-nonfree --enable-libfdk-aac --enable-opencl ${FFMPEG_EXTRAS}
-#      --enable-libass --enable-lto --enable-nonfree --enable-libfdk-aac --enable-opencl ${FFMPEG_EXTRAS}
+  ./configure --prefix="$4" --enable-gpl --pkg-config-flags="--static" --pkg-config=$3/bin/pkg-config \
+      --disable-encoders --enable-libx264 --enable-encoder=libx264 --enable-encoder=aac --enable-encoder=pcm_s16le \
+      --enable-libaom --enable-libx265 --enable-libvpx --enable-libmp3lame \
+      --enable-runtime-cpudetect \
+      --enable-audiotoolbox --enable-videotoolbox \
+      --disable-filters --enable-filter=scale --enable-filter=aresample \
+      --disable-devices --disable-doc \
+      --enable-lto --enable-nonfree --enable-opencl --enable-small ${FFMPEG_EXTRAS}
 
   checkStatus $? "configuration of ${SOFTWARE} failed"
 

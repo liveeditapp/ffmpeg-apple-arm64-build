@@ -176,17 +176,17 @@ $SCRIPT_DIR/build-harfbuzz.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "
 checkStatus $? "build harfbuzz"
 echoDurationInSections $START_TIME
 
-START_TIME=$(currentTimeInSeconds)
-echoSection "compile libass"
-$SCRIPT_DIR/build-libass.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "0.15.1" > "$WORKING_DIR/build-libass.log" 2>&1
-checkStatus $? "build libass"
-echoDurationInSections $START_TIME
+# START_TIME=$(currentTimeInSeconds)
+# echoSection "compile libass"
+# $SCRIPT_DIR/build-libass.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "0.15.1" > "$WORKING_DIR/build-libass.log" 2>&1
+# checkStatus $? "build libass"
+# echoDurationInSections $START_TIME
 
-START_TIME=$(currentTimeInSeconds)
-echoSection "compile fdk-aac"
-$SCRIPT_DIR/build-fdk-aac.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "2.0.2" > "$WORKING_DIR/build-fdk-aac.log" 2>&1
-checkStatus $? "build fdk-aac"
-echoDurationInSections $START_TIME
+# START_TIME=$(currentTimeInSeconds)
+# echoSection "compile fdk-aac"
+# $SCRIPT_DIR/build-fdk-aac.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "2.0.2" > "$WORKING_DIR/build-fdk-aac.log" 2>&1
+# checkStatus $? "build fdk-aac"
+# echoDurationInSections $START_TIME
 
 START_TIME=$(currentTimeInSeconds)
 echoSection "compile x265"
@@ -194,23 +194,23 @@ $SCRIPT_DIR/build-x265.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "3.4"
 checkStatus $? "build x265"
 echoDurationInSections $START_TIME
 
-START_TIME=$(currentTimeInSeconds)
-echoSection "compile svt-av1"
-$SCRIPT_DIR/build-svt-av1.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "xxxx" > "$WORKING_DIR/build-svt-av1.log" 2>&1
-checkStatus $? "build svt-av1"
-echoDurationInSections $START_TIME
+# START_TIME=$(currentTimeInSeconds)
+# echoSection "compile svt-av1"
+# $SCRIPT_DIR/build-svt-av1.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "xxxx" > "$WORKING_DIR/build-svt-av1.log" 2>&1
+# checkStatus $? "build svt-av1"
+# echoDurationInSections $START_TIME
 
-START_TIME=$(currentTimeInSeconds)
-echoSection "compile ogg"
-$SCRIPT_DIR/build-ogg.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "xxxx" > "$WORKING_DIR/build-ogg.log" 2>&1
-checkStatus $? "build ogg"
-echoDurationInSections $START_TIME
+# START_TIME=$(currentTimeInSeconds)
+# echoSection "compile ogg"
+# $SCRIPT_DIR/build-ogg.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "xxxx" > "$WORKING_DIR/build-ogg.log" 2>&1
+# checkStatus $? "build ogg"
+# echoDurationInSections $START_TIME
 
-START_TIME=$(currentTimeInSeconds)
-echoSection "compile vorbis"
-$SCRIPT_DIR/build-vorbis.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "xxxx" > "$WORKING_DIR/build-vorbis.log" 2>&1
-checkStatus $? "build vorbis"
-echoDurationInSections $START_TIME
+# START_TIME=$(currentTimeInSeconds)
+# echoSection "compile vorbis"
+# $SCRIPT_DIR/build-vorbis.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "xxxx" > "$WORKING_DIR/build-vorbis.log" 2>&1
+# checkStatus $? "build vorbis"
+# echoDurationInSections $START_TIME
 
 START_TIME=$(currentTimeInSeconds)
 echoSection "compile aom"
@@ -218,12 +218,12 @@ $SCRIPT_DIR/build-aom.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "2.0.0
 checkStatus $? "build aom"
 echoDurationInSections $START_TIME
 
-START_TIME=$(currentTimeInSeconds)
-echoSection "compile openh264"
-#$SCRIPT_DIR/build-openh264.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "2.1.1" > "$WORKING_DIR/build-openh264.log" 2>&1
-$SCRIPT_DIR/build-openh264.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "2.3.0" > "$WORKING_DIR/build-openh264.log" 2>&1
-checkStatus $? "build openh264"
-echoDurationInSections $START_TIME
+# START_TIME=$(currentTimeInSeconds)
+# echoSection "compile openh264"
+# #$SCRIPT_DIR/build-openh264.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "2.1.1" > "$WORKING_DIR/build-openh264.log" 2>&1
+# $SCRIPT_DIR/build-openh264.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "2.3.0" > "$WORKING_DIR/build-openh264.log" 2>&1
+# checkStatus $? "build openh264"
+# echoDurationInSections $START_TIME
 
 START_TIME=$(currentTimeInSeconds)
 echoSection "compile x264"
@@ -243,11 +243,11 @@ $SCRIPT_DIR/build-lame.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "3.100" > "$W
 checkStatus $? "build lame"
 echoDurationInSections $START_TIME
 
-START_TIME=$(currentTimeInSeconds)
-echoSection "compile opus"
-$SCRIPT_DIR/build-opus.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "1.3.1" > "$WORKING_DIR/build-opus.log" 2>&1
-checkStatus $? "build opus"
-echoDurationInSections $START_TIME
+# START_TIME=$(currentTimeInSeconds)
+# echoSection "compile opus"
+# $SCRIPT_DIR/build-opus.sh "$SCRIPT_DIR" "$WORKING_DIR" "$TOOL_DIR" "$CPUS" "1.3.1" > "$WORKING_DIR/build-opus.log" 2>&1
+# checkStatus $? "build opus"
+# echoDurationInSections $START_TIME
 
 
 if [[ "${ENABLE_FFPLAY}" == "TRUE" ]]
